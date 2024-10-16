@@ -1,0 +1,95 @@
+.weather-today {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 16px;
+	padding: 32px 0;
+}
+
+.weather-today__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 50%;
+}
+
+.weather-today__info-day {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 64px;
+}
+
+.weather-today__dateTimeCity {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 8px;
+}
+
+.weather-today__temp {
+	font-size: 112px;
+	line-height: 112px;
+	font-weight: 700;
+}
+
+.weather-today__city {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+.weather-today__date,
+.weather-today__time {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.weather-today__other-info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+}
+
+.weather-today__other-info-weather {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+}
+
+.weather-today__other-info-weather img {
+	width: 24px;
+	height: 24px;
+}
+
+.weather-today__other-info-weather figcaption,
+.weather-today__feeling {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+@media (max-width: 850px) {
+	.weather-today {
+		flex-direction: column;
+		padding: 24px 0;
+		row-gap: 48px;
+	}
+
+	.weather-today__info-day {
+		row-gap: 24px;
+	}
+
+	.weather-today__dateTimeCity {
+		row-gap: 6px;
+	}
+}
+
+@media (max-width: 450px) {
+	.weather-today {
+		padding: 16px 0;
+	}
+}

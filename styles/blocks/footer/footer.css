@@ -1,0 +1,31 @@
+.footer {
+	height: var(--footer-height);
+	padding: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer a {
+	text-transform: uppercase;
+	color: rgba(245, 244, 244, 1);
+	transition: color 0.2s ease-in-out;
+}
+
+.footer a:hover {
+	color: rgb(147, 51, 234);
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 24px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 450px) {
+	.footer {
+		font-size: 12px;
+		padding: 16px 0 0 0;
+	}
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/weather.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./styles/styles.css" />
+		<title>Weather-App</title>
+	</head>
+	<body>
+		<h1 class="visually-hidden">Weather-App</h1>
+		<div class="content">
+			<header class="header">
+				<a href="#" class="header__logo"></a>
+
+				<form class="header__search">
+					<button class="header__search-button" type="button" id="search">
+						<svg
+							width="24"
+							height="24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.35-4.35"
+								stroke="#545454"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+					</button>
+
+					<button class="header__search-button reset" type="button" id="reset">
+						<svg
+							width="16"
+							height="16"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M.65 1.951a.92.92 0 1 1 1.301-1.3L15.35 14.049a.92.92 0 0 1-1.301 1.3L.65 1.951Z"
+								fill="#545454"
+								stroke="#545454"
+								stroke-width=".5"
+							/>
+							<path
+								d="M.65 15.35a.92.92 0 0 1 0-1.301L14.05.65a.92.92 0 1 1 1.3 1.301L1.953 15.35a.92.92 0 0 1-1.301 0Z"
+								fill="#545454"
+								stroke="#545454"
+								stroke-width=".5"
+							/>
+						</svg>
+					</button>
+
+					<input
+						type="text"
+						class="header__search-input"
+						placeholder="Поиск по городу"
+					/>
+				</form>
+			</header>
+			<main>
+				<section class="weather-today">
+					<article class="weather-today__content">
+						<div class="weather-today__info-day">
+							<div class="weather-today__dateTimeCity">
+								<span class="weather-today__city">Москва</span>
+								<time datetime="2021-01-06" class="weather-today__date"
+									>Суббота, 06 января</time
+								>
+								<time datetime="11:29" class="weather-today__time">11:29</time>
+							</div>
+							<span class="weather-today__temp">-7°</span>
+
+							<div class="weather-today__other-info">
+								<figure class="weather-today__other-info-weather">
+									<img
+										src="./assets/icons/icon-clouds.svg"
+										alt="иконка облаков"
+										width="24"
+										height="24"
+										loading="lazy"
+									/>
+									<figcaption>Облачно</figcaption>
+								</figure>
+
+								<span class="weather-today__feeling">Ощущается как -11°</span>
+							</div>
+						</div>
+					</article>
+
+					<ul class="weather-details"></ul>
+				</section>
+
+				<section class="slider">
+					<div class="slider__content">
+						<h2 class="slider__title" id="tablist_label">Прогноз:</h2>
+
+						<ul
+							role="tablist"
+							aria-labelledby="tablist_label"
+							class="slider__tab-button-list"
+						>
+							<li>
+								<button
+									role="tab"
+									type="button"
+									id="tab-1"
+									aria-selected="true"
+									aria-controls="tabpanel-twenty_four_hours"
+									class="slider__tab-button is-current"
+								>
+									на 24 часа
+								</button>
+							</li>
+
+							<li>
+								<button
+									role="tab"
+									type="button"
+									id="tab-2"
+									aria-selected="false"
+									aria-controls="tabpanel-5_days"
+									class="slider__tab-button"
+								>
+									на 5 дней
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="slider__tab-container">
+						<button class="slider__switch-button disabled">
+							<img
+								src="./assets/icons/icon-arrow-left.svg"
+								alt="иконка стрелки лево"
+								loading="lazy"
+								width="24"
+								height="24"
+							/>
+						</button>
+						<ul
+							class="slider__tab-content content_show"
+							role="tabpanel"
+							id="tabpanel-twenty_four_hours"
+							tabindex="0"
+							aria-labelledby="tab-1"
+						></ul>
+
+						<ul
+							class="slider__tab-content"
+							role="tabpanel"
+							id="tabpanel-week"
+							tabindex="0"
+							aria-labelledby="tab-2"
+						></ul>
+
+						<button class="slider__switch-button">
+							<img
+								src="./assets/icons/icon-arrow-right.svg"
+								alt="иконка стрелки право"
+								loading="lazy"
+								width="9"
+								height="18"
+							/>
+						</button>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<span
+					>Проект выполнен в рамках стажировки
+					<a href="https://preax.ru" target="_blank" rel="noopener noreferrer"
+						>PREAX</a
+					></span
+				>
+			</footer>
+		</div>
+
+		<script src="./scripts/main.js" type="module"></script>
+	</body>
+</html>
