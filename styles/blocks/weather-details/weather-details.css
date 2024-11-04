@@ -1,6 +1,6 @@
 .weather-details {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 16px;
 	width: 506px;
 	height: auto;
@@ -35,13 +35,19 @@
 	border-radius: var(--border-radius);
 	background-color: rgba(218, 218, 218, 0.4);
 	border: none;
+	margin: 0;
+	position: relative;
 }
 
-.weather-details__meter::-webkit-slider-thumb {
+.weather-details__meter::-webkit-slider-thumb,
+.weather-details__meter_pressure::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	width: 8px;
-	height: 8px;
-	background: rgba(245, 244, 244, 1);
+	width: 12px;
+	height: 12px;
+
+	background: url("../../../assets/icons/icon-ellipse.svg") center center / 8px
+			no-repeat,
+		rgba(218, 218, 218, 0.4);
 	border-radius: 50%;
 }
 
@@ -55,14 +61,6 @@
 		#dadada 100%,
 		rgba(218, 218, 218, 0.4) 100%
 	);
-}
-
-.weather-details__meter_pressure::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	width: 8px;
-	height: 8px;
-	background: rgba(245, 244, 244, 1);
-	border-radius: 50%;
 }
 
 .weather-details__value-wrapper {
@@ -91,12 +89,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 8px;
+	gap: 6px;
 }
 
-@media (max-width: 850px) {
+@media (width < 887px) {
 	.weather-details {
-		width: clamp(300px, 100%, 672px);
 		justify-content: center;
 		gap: 12px;
 	}
@@ -109,13 +106,14 @@
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 641px) {
 	.weather-details {
+		max-width: 400px;
 		gap: 8px;
 	}
 
 	.weather-details__item {
-		width: 94px;
+		max-width: 128px;
 		height: 148px;
 		padding: 12px;
 		row-gap: 12px;
@@ -132,7 +130,7 @@
 	}
 
 	.weather-details__value-wrapper {
-		column-gap: 25px;
+		column-gap: 24px;
 	}
 	.weather-details__value-wrapper span {
 		font-size: 10px;
@@ -142,5 +140,25 @@
 	.weather-details__value {
 		font-size: 22px;
 		line-height: 22px;
+	}
+
+	.weather-details__meter {
+		height: 6px;
+	}
+
+	.weather-details__meter::-webkit-slider-thumb,
+	.weather-details__meter_pressure::-webkit-slider-thumb {
+		width: 6px;
+		height: 6px;
+	}
+}
+
+@media (width < 450px) {
+	.weather-details {
+		width: 311px;
+	}
+
+	.weather-details__item {
+		width: 100%;
 	}
 }

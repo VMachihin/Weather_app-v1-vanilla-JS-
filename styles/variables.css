@@ -1,0 +1,18 @@
+:root {
+	--color-dark: #000000;
+	--color-light: #f5f4f4;
+	--color-light-accent: #dadada;
+	--color-gray: rgba(112, 112, 112, 1);
+	--color-gray-accent: #a6a6a6;
+
+	--container-width: 1120px;
+	--container-padding-x: 32px;
+
+	--border-radius: 8px;
+
+	--font-family-base: "Raleway", sans-serif;
+
+	--transition-duration: 0.2s;
+
+	--header-height: 112px;
+}

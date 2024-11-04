@@ -1,6 +1,6 @@
 export function renderCardInfoOneDay(weatherData) {
-  const renderCardInfoOneDay = weatherData.map((item) => {
-    return `
+	const renderCardInfoOneDay = weatherData.map((item) => {
+		return `
                 <li class="slider__tab-info">
                   <span class="slider__time">${item.time}</span>
                   <img
@@ -13,7 +13,7 @@ export function renderCardInfoOneDay(weatherData) {
                 </li>
       
       `;
-  });
+	});
 
-  return renderCardInfoOneDay;
+	return renderCardInfoOneDay;
 }

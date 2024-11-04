@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		sliderTabButtons[i].addEventListener("click", () => {
 			//Удаляем активный класс у всех контейнеров слайдера
 			tabContent.forEach((tab) => {
-				tab.classList.remove("content_show");
+				tab.classList.remove("slider__tab-content_content_show");
 			});
 			// Удаляем активный класс у всех кнопок табов слайдера
 			sliderTabButtons.forEach((button) => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			// Добавляем активный класс к текущей кнопке и табу
 			sliderTabButtons[i].classList.add("is-current");
-			tabContent[i].classList.add("content_show");
+			tabContent[i].classList.add("slider__tab-content_content_show");
 		});
 	}
 
@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	//
 	inputSearch.addEventListener("input", (event) => {
-		console.log(event.target.value);
+		event.preventDefault();
+
 		buttonSearch.style = "display: none";
 		deleteButton.style = "display: block";
 
@@ -62,10 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	//
-	deleteButton.addEventListener("click", (event) => {
-		event.preventDefault();
-
-		inputSearch.value = "";
+	deleteButton.addEventListener("click", () => {
 		buttonSearch.style = "display: block";
 		deleteButton.style = "display: none";
 	});

@@ -22,6 +22,7 @@ export function renderCardsDetails(weatherDataArray) {
       <img
       src=${item.icon}
       alt="icon weather"
+      
       />
       <span class="weather-details__value">${item.value}</span>
       <div class="weather-details__more-details">

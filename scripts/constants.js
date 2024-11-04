@@ -1,4 +1,4 @@
-const inputSearch = document.querySelector(".header__search-input");
+const inputSearch = document.querySelector(".search-form__input");
 const buttonSearch = document.querySelector("#search");
 const deleteButton = document.querySelector("#reset");
 const weatherDetailsList = document.querySelector(".weather-details");
@@ -19,3 +19,5 @@ export {
 	sliderTabContentWeek,
 	tabContent,
 };
+
+console.log(deleteButton);

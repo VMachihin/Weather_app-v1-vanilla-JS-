@@ -1,91 +1,13 @@
-@import url(./normalize.css);
-@import url(./fonts.css);
-@import url("./blocks/content/content.css");
-@import url("./blocks/header/header.css");
-@import url("./blocks/weather-today/weather-today.css");
-@import url("./blocks/weather-details/weather-details.css");
-@import url("./blocks/slider/slider.css");
-@import url("./blocks/footer/footer.css");
+@import "./normalize.css";
+@import "./fonts.css";
+@import "./variables.css";
+@import "./global.css";
 
-:root {
-	--color-dark: #000000;
-	--color-light: #f5f4f4;
-	--color-light-accent: #dadada;
-	--color-gray: #707070;
-	--color-gray-accent: #a6a6a6;
-
-	--border-radius: 8px;
-
-	--font-family-base: "Raleway", sans-serif;
-
-	--container-width: 1056px;
-	--container-padding-x: 32px;
-
-	--transition-duration: 0.2s;
-
-	--header-height: 112px;
-	--footer-height: 84px;
-}
-
-* {
-	scroll-behavior: smooth;
-}
-
-body {
-	font-family: var(--font-family-base);
-	font-size: 16px;
-	font-weight: 400;
-	color: var(--color-light);
-	font-variant-numeric: lining-nums;
-	background: url("../assets/images/main-bg.jpg") center center / cover
-		no-repeat;
-	background-attachment: fixed;
-	padding: 32px 0;
-}
-
-a,
-button,
-input,
-textarea,
-svg * {
-	transition-duration: var(--transition-duration);
-}
-
-svg * {
-	transition-property: fill, stroke;
-}
-
-.visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	margin: -1px !important;
-	border: 0 !important;
-	padding: 0 !important;
-	white-space: nowrap !important;
-	clip-path: inset(100%) !important;
-	clip: rect(0 0 0 0) !important;
-	overflow: hidden !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 700;
-	color: var(--color-light);
-}
-
-@media (max-width: 850px) {
-	body {
-		padding: 24px;
-	}
-}
-
-@media (max-width: 450px) {
-	body {
-		padding: 16px;
-	}
-}
+@import "./blocks/container/container.css";
+@import "./blocks/content/content.css";
+@import "./blocks/header/header.css";
+@import "./blocks/search-form/search-form.css";
+@import "./blocks/weather-today/weather-today.css";
+@import "./blocks/weather-details/weather-details.css";
+@import "./blocks/slider/slider.css";
+@import "./blocks/footer/footer.css";
