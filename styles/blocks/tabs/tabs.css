@@ -1,0 +1,20 @@
+.tabs {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	margin-bottom: 32px;
+}
+
+@media (width < 887px) {
+	.tabs {
+		gap: 24px;
+		margin-bottom: 24px;
+	}
+}
+
+@media (width < 641px) {
+	.tabs {
+		gap: 16px;
+		margin-bottom: 16px;
+	}
+}

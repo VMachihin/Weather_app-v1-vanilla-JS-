@@ -1,0 +1,6 @@
+@media (width < 641px) {
+	.slider__image {
+		width: 24px;
+		height: 24px;
+	}
+}

@@ -1,0 +1,5 @@
+.tabs__button_active {
+	color: var(--color-light);
+	border-bottom: 2px solid var(--color-light);
+	cursor: default;
+}

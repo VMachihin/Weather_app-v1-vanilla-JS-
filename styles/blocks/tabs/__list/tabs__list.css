@@ -1,0 +1,12 @@
+.tabs__list {
+	display: flex;
+	align-items: center;
+	column-gap: 32px;
+	justify-content: space-between;
+}
+
+@media (width < 641px) {
+	.tabs__list {
+		column-gap: 16px;
+	}
+}

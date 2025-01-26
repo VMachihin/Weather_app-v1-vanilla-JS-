@@ -1,0 +1,21 @@
+.header__logo {
+	width: 192px;
+	height: 48px;
+	background: url("../../../../assets/icons/icon-logo.svg") center / contain no-repeat;
+	flex-shrink: 0;
+}
+
+@media (width < 887px) {
+	.header__logo {
+		width: 54px;
+		height: 48px;
+		background: url("../../../../assets/icons/icon-mobile-logo.svg") center / contain no-repeat;
+	}
+}
+
+@media (width < 641px) {
+	.header__logo {
+		width: 32px;
+		height: 32px;
+	}
+}

@@ -1,0 +1,28 @@
+.search-form__button {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	background: url("../../../../assets/icons/icon-search.svg") center center / cover no-repeat;
+	border: none;
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	padding: 0;
+	cursor: pointer;
+}
+
+@media (width < 887px) {
+	.search-form__button {
+		right: 20px;
+	}
+}
+
+@media (width < 641px) {
+	.search-form__button {
+		width: 16px;
+		height: 16px;
+		top: 8px;
+		right: 12px;
+	}
+}

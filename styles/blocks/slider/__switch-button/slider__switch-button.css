@@ -1,0 +1,28 @@
+.slider__switch-button {
+	min-width: 56px;
+	height: 48px;
+	border: none;
+	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-light-alt);
+	transition: background var(--transition-duration) ease;
+	cursor: pointer;
+}
+
+.slider__switch-button:hover {
+	background: var(--color-light-accent);
+}
+
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+@media (width < 641px) {
+	.slider__switch-button {
+		min-width: 40px;
+		height: 32px;
+	}
+}

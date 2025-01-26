@@ -1,0 +1,22 @@
+.tabs__button {
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 700;
+	border: none;
+	border-bottom: 2px solid transparent;
+	background: transparent;
+	color: var(--color-gray-accent);
+	padding: 6px 0 0 0;
+	cursor: pointer;
+	transition: border-bottom var(--transition-duration) ease-in-out;
+}
+
+.tabs__button:hover {
+	border-bottom: 2px solid var(--color-gray-accent);
+}
+
+@media (width < 641px) {
+	.tabs__button {
+		font-size: 12px;
+	}
+}
