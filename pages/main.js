@@ -6,9 +6,9 @@ import {
 	weatherDetailsTemplate,
 	weatherDetailsCard,
 	sliderWeatherTemplateDay,
+	sliderWeatherTemplateWeek,
 	sliderWeatherCard,
 	sliderWeatherCardContainer,
-	sliderWeatherTemplateWeek,
 } from '../scripts/constants.js';
 import Card from '../components/Card.js';
 import Section from '../components/Section.js';
@@ -30,14 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Добавляем активный класс к текущей кнопке и табу
 			tabButtons[i].classList.add('tabs__button_active');
 
-			if (tabButtons[i].dataset.day) {
-				weatherSliderCards.renderCards(weatherDataSlider.oneDay);
-			}
-
-			if (tabButtons[i].dataset.week) {
-				weatherSliderCards.renderCards(weatherDataSlider.week);
-			}
-
 			console.log(tabButtons[i]);
 			// tabContent[i].classList.add("slider__tab-content_content_show");
 		});
@@ -50,15 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
 		return cardItem;
 	};
 
-	const createWeatherSliderCard = (weatherData) => {
+	const createWeatherSliderCardDay = (weatherData) => {
 		const card = new Card(weatherData, sliderWeatherTemplateDay, sliderWeatherCard);
 		const cardItem = card.createSliderCard();
 
 		return cardItem;
 	};
 
+	const createWeatherSliderCardWeek = (weatherData) => {
+		console.log(weatherData);
+		const card = new Card(weatherData, sliderWeatherTemplateWeek, sliderWeatherCard);
+		const cardItem = card.createSliderCard();
+
+		return cardItem;
+	};
+
 	const weatherDetailsCards = new Section(createWeatherDetailsCard, weatherDetailsContainer);
-	const weatherSliderCards = new Section(createWeatherSliderCard, sliderWeatherCardContainer);
+	const weatherSliderCardsDay = new Section(createWeatherSliderCardDay, sliderWeatherCardContainer);
+	const weatherSliderCardsWeek = new Section(
+		createWeatherSliderCardWeek,
+		sliderWeatherCardContainer,
+	);
 	//
 	inputSearch.addEventListener('input', (event) => {
 		event.preventDefault();
@@ -81,4 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	weatherDetailsCards.renderCards(weatherDataDetails);
+	weatherSliderCardsDay.renderCards(weatherDataSlider.oneDay);
+	weatherSliderCardsWeek.renderCards(weatherDataSlider.week);
 });

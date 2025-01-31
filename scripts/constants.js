@@ -9,11 +9,11 @@ const weatherDetailsCard = '.weather-details__item';
 const weatherDetailsContainer = '.weather-details';
 //
 
-const sliderWeatherTemplateDay = '.day-template';
+const sliderWeatherTemplateDay = '.slider-template-day';
+const sliderWeatherTemplateWeek = '.slider-template-week';
 const sliderWeatherCard = '.slider__tab';
 const sliderWeatherCardContainer = '.slider__list';
 //
-const sliderWeatherTemplateWeek = '.week-template';
 
 export {
 	inputSearch,
@@ -25,7 +25,7 @@ export {
 	weatherDetailsTemplate,
 	weatherDetailsCard,
 	sliderWeatherTemplateDay,
+	sliderWeatherTemplateWeek,
 	sliderWeatherCard,
 	sliderWeatherCardContainer,
-	sliderWeatherTemplateWeek,
 };

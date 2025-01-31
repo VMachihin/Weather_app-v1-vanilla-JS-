@@ -1,6 +1,5 @@
 export default class Card {
 	constructor(weatherData, templateSelector, cardSelector) {
-		console.log(templateSelector);
 		this._id = weatherData.id;
 		this._title = weatherData.title;
 		this._icon = weatherData.icon;
@@ -65,31 +64,16 @@ export default class Card {
 	createSliderCard() {
 		this._cardElement = this._getTemplate();
 
-		if (this._cardElement.id === 'tabpanel-day') {
-			this._cardTime = this._cardElement.querySelector('.slider__time');
-			this._cardLogo = this._cardElement.querySelector('.slider__image');
-			this._cardTemp = this._cardElement.querySelector('.slider__temp');
+		// console.log(this._cardElement);
 
-			this._cardTime.textContent = this._time;
-			this._cardLogo.src = this._logo;
-			this._cardTemp.textContent = this._temp;
+		this._cardTime = this._cardElement.querySelector('.slider__time');
+		this._cardLogo = this._cardElement.querySelector('.slider__image');
+		this._cardTemp = this._cardElement.querySelector('.slider__temp');
 
-			return this._cardElement;
-		}
+		this._cardTime.textContent = this._time;
+		this._cardLogo.src = this._logo;
+		this._cardTemp.textContent = this._temp;
 
-		console.log(this._cardElement.id);
-		if (this._cardElement.id === 'tabpanel-week') {
-			this._cardTime = this._cardElement.querySelector('.slider__time');
-			this._cardLogo = this._cardElement.querySelector('.slider__image');
-			this._cardTemp = this._cardElement.querySelector('.slider__temp');
-
-			this._cardTime.textContent = this._time;
-			this._cardLogo.src = this._logo;
-			this._cardTemp.textContent = this._temp;
-
-			console.log(this._cardElement);
-
-			return this._cardElement;
-		}
+		return this._cardElement;
 	}
 }
