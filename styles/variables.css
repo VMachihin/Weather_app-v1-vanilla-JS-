@@ -1,9 +1,9 @@
 :root {
 	--color-dark: #000000;
-	--color-light: rgba(245, 244, 244, 1);
-	--color-light-alt: rgba(245, 244, 244, 0.4);
-	--color-light-accent: rgba(218, 218, 218, 1);
-	--color-gray: rgba(112, 112, 112, 1);
+	--color-light: rgb(245 244 244 / 1);
+	--color-light-alt: rgb(245 244 244 / 0.4);
+	--color-light-accent: rgb(218 218 218 / 1);
+	--color-gray: rgb(112 112 112 / 1);
 	--color-gray-accent: #a6a6a6;
 
 	--border-radius: 8px;

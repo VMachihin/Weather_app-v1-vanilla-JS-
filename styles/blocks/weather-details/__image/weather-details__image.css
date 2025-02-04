@@ -1,10 +1,11 @@
 .weather-details__image {
 	width: 32px;
-	aspect-ratio: 1 / 1;
+	height: 32px;
 }
 
-@media (max-width: 641px) {
+@media (width < 641px) {
 	.weather-details__image {
 		width: 24px;
+		height: 24px;
 	}
 }

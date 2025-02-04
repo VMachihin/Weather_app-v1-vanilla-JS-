@@ -2,7 +2,7 @@
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: rgba(245, 244, 244, 1);
+	background: var(--color-light);
 	position: absolute;
 	left: calc(75% - 4px);
 }

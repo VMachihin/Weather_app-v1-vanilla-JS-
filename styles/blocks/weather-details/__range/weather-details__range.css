@@ -5,7 +5,7 @@
 	position: relative;
 	overflow: hidden;
 	mask: radial-gradient(circle 20px at 75%, #000 4px, transparent 4px, transparent 6px, #000 0);
-	border-radius: 8px;
+	border-radius: var(--border-radius);
 }
 
 @media (width < 641px) {

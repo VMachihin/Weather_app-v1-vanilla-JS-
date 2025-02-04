@@ -1,14 +1,12 @@
 body {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   font-family: var(--font-family-base), sans-serif;
-  font-size: 16px;
-  font-weight: 400;
   color: var(--color-light);
   font-variant-numeric: lining-nums;
   background: url('../assets/images/main-bg.jpg') center / cover no-repeat fixed;
   padding: 32px;
-  box-sizing: border-box;
 }
 
 a,

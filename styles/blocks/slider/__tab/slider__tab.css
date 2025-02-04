@@ -5,7 +5,7 @@
 	width: 156px;
 	flex-shrink: 0;
 	height: auto;
-	background: rgba(245, 244, 244, 0.4);
+	background: var(--color-light-alt);
 	border-radius: var(--border-radius);
 	padding: 16px;
 }

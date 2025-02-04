@@ -17,7 +17,6 @@
 @import '../styles/blocks/weather-details/__value/weather-details__value.css';
 @import '../styles/blocks/weather-details/__bar/weather-details__bar.css';
 @import '../styles/blocks/weather-details/__bar-values/weather-details__bar-values.css';
-@import '../styles/blocks/weather-details/__bar-values/_hidden/weather-details__bar-value_hidden.css';
 @import '../styles/blocks/weather-details/__range/weather-details__range.css';
 @import '../styles/blocks/weather-details/__range/_pressure/weather-details__range_pressure.css';
 @import '../styles/blocks/weather-details/__range-ellipse/weather-details__range-ellipse.css';

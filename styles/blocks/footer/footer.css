@@ -9,7 +9,7 @@
 
 .footer a {
 	text-transform: uppercase;
-	color: rgba(245, 244, 244, 1);
+	color: var(--color-light);
 	transition: color 0.2s ease-in-out;
 }
 

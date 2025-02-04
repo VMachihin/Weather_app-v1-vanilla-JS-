@@ -1,10 +1,9 @@
 .weather-details__title {
-	font-size: 16px;
 	line-height: 20px;
 	color: var(--color-dark);
 }
 
-@media (max-width: 641px) {
+@media (width < 641px) {
 	.weather-details__title {
 		font-size: 12px;
 		line-height: 16px;

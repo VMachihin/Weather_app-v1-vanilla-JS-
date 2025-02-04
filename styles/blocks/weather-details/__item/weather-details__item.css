@@ -3,7 +3,7 @@
 	height: 196px;
 	padding: 16px;
 	border-radius: var(--border-radius);
-	background: rgba(245, 244, 244, 0.4);
+	background: var(--color-light-alt);
 	color: var(--color-dark);
 	backdrop-filter: blur(10px);
 	display: flex;

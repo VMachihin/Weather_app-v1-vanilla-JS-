@@ -1,12 +1,11 @@
 .tabs__button {
-	font-size: 16px;
 	line-height: 26px;
 	font-weight: 700;
 	border: none;
 	border-bottom: 2px solid transparent;
 	background: transparent;
 	color: var(--color-gray-accent);
-	padding: 6px 0 0 0;
+	padding-top: 6px;
 	cursor: pointer;
 	transition: border-bottom var(--transition-duration) ease-in-out;
 }
