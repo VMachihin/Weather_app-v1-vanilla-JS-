@@ -1,24 +1,31 @@
-export default class Card {
-  constructor(weatherData, templateSelector, cardSelector) {
+import { weatherDataDetails } from '../mock/weatherData.js';
+
+export class WeatherDetails {
+  selectors = {
+    template: '.weather-details-template',
+    cardDetails: '.weather-details__item',
+  };
+
+  constructor(weatherData) {
     this._id = weatherData.id;
     this._title = weatherData.title;
     this._icon = weatherData.icon;
     this._value = weatherData.value;
     this._barValue = weatherData.info;
-    this._templateSelector = templateSelector;
-    this._cardSelector = cardSelector;
     this._time = weatherData.time;
     this._logo = weatherData.logo;
     this._temp = weatherData.temp;
+
+    this.template = document.querySelector(this.selectors.template);
+    this.root = document.querySelector(this.selectors.root);
   }
 
   _getTemplate() {
-    const newCard = document
-      .querySelector(this._templateSelector)
-      .content.querySelector(this._cardSelector)
+    const newCardDetails = this.template.content
+      .querySelector(this.selectors.cardDetails)
       .cloneNode(true);
 
-    return newCard;
+    return newCardDetails;
   }
 
   createDetailsCard() {
@@ -27,6 +34,8 @@ export default class Card {
     this._cardTitle = this._cardElement.querySelector('.weather-details__title');
     this._cardIcon = this._cardElement.querySelector('.weather-details__image');
     this._cardRange = this._cardElement.querySelector('.weather-details__range');
+
+    console.log(this._cardElement);
 
     this._cardBarValues = this._cardElement.querySelector('.weather-details__bar-values');
     this._cardValue = this._cardElement.querySelector('.weather-details__value');
@@ -60,18 +69,6 @@ export default class Card {
 
     return this._cardElement;
   }
-
-  createSliderCard() {
-    this._cardElement = this._getTemplate();
-
-    this._cardTime = this._cardElement.querySelector('.slider__time');
-    this._cardLogo = this._cardElement.querySelector('.slider__image');
-    this._cardTemp = this._cardElement.querySelector('.slider__temp');
-
-    this._cardTime.textContent = this._time;
-    this._cardLogo.src = this._logo;
-    this._cardTemp.textContent = this._temp;
-
-    return this._cardElement;
-  }
 }
+
+export const weatherCardDetails = new WeatherDetails(weatherDataDetails);
