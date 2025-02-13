@@ -2,36 +2,38 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 156px;
+	width: fit-content;
+	min-width: 156px;
 	flex-shrink: 0;
 	height: auto;
 	background: var(--color-light-alt);
 	border-radius: var(--border-radius);
 	padding: 16px;
+	column-gap: 12px;
 }
 
 @media (width < 768px) {
 	.slider__tab {
 		flex-direction: column;
-		width: 73px;
 		height: 136px;
+		min-width: 73px;
 	}
 }
 
 @media (width < 641px) {
 	.slider__tab {
 		flex-direction: row;
-		width: 118px;
 		height: 48px;
 		padding: 12px;
 		font-size: 12px;
+		column-gap: 12px;
 	}
 }
 
 @media (width < 380px) {
 	.slider__tab {
 		flex-direction: column;
-		width: 55px;
+		min-width: 55px;
 		height: 104px;
 	}
 }

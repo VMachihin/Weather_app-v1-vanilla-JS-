@@ -2,16 +2,15 @@ const inputSearch = document.querySelector('.search-form__input');
 const inputButton = document.querySelector('#inputBtn');
 const weatherDetailsList = document.querySelector('.weather-details');
 const tabButtons = document.querySelectorAll('.tabs__button');
-const tabContent = document.querySelectorAll('.slider__tab-content');
+const tabContents = document.querySelectorAll('.tab-content');
 //
 
 const weatherDetailsRoot = '.weather-details';
+const weatherSliderRootDay = '.slider__list-day';
+const weatherSliderRootWeek = '.slider__list-week';
 //
 
-const sliderWeatherTemplateDay = '.slider-template-day';
-const sliderWeatherTemplateWeek = '.slider-template-week';
 const sliderWeatherCard = '.slider__tab';
-const sliderWeatherCardContainer = '.slider__list';
 //
 
 export {
@@ -19,10 +18,9 @@ export {
   inputButton,
   weatherDetailsList,
   tabButtons,
-  tabContent,
+  tabContents,
   weatherDetailsRoot,
-  sliderWeatherTemplateDay,
-  sliderWeatherTemplateWeek,
+  weatherSliderRootDay,
+  weatherSliderRootWeek,
   sliderWeatherCard,
-  sliderWeatherCardContainer,
 };

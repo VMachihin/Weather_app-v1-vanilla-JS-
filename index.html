@@ -1,144 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Приложение погоды" />
-		<link rel="shortcut icon" href="./assets/weather.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="./pages/styles.css" />
-		<title>Weather-App</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Приложение погоды" />
+    <link rel="shortcut icon" href="./assets/weather.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./pages/styles.css" />
+    <title>Weather-App</title>
+  </head>
 
-	<body>
-		<h1 class="visually-hidden">Weather-App</h1>
-		<div class="content">
-			<header class="header">
-				<a href="#" class="header__logo"></a>
+  <body>
+    <h1 class="visually-hidden">Weather-App</h1>
+    <div class="content">
+      <header class="header">
+        <a href="#" class="header__logo"></a>
 
-				<form class="search-form">
-					<label>
-						<input type="text" class="search-form__input" placeholder="Поиск по городу" />
-					</label>
-					<button class="search-form__button search" type="button" id="inputBtn"></button>
-				</form>
-			</header>
+        <form class="search-form">
+          <label>
+            <input
+              type="text"
+              class="search-form__input"
+              placeholder="Поиск по городу"
+            />
+          </label>
+          <button
+            class="search-form__button search"
+            type="button"
+            id="inputBtn"
+          ></button>
+        </form>
+      </header>
 
-			<main class="main">
-				<section class="weather-today">
-					<article class="weather-today__content">
-						<h2 class="visually-hidden">Погода сегодня</h2>
-						<div class="weather-today__info-day">
-							<div class="weather-today__dateTimeCity">
-								<span class="weather-today__city">Москва</span>
-								<time datetime="2021-01-06" class="weather-today__date">Суббота, 06 января </time>
-								<time datetime="11:29" class="weather-today__time">11:29</time>
-							</div>
-							<span class="weather-today__temp">-7°</span>
+      <main class="main">
+        <section class="weather-today">
+          <article class="weather-today__content">
+            <h2 class="visually-hidden">Погода сегодня</h2>
+            <div class="weather-today__info-day">
+              <div class="weather-today__dateTimeCity">
+                <span class="weather-today__city">Москва</span>
+                <time datetime="2021-01-06" class="weather-today__date"
+                  >Суббота, 06 января
+                </time>
+                <time datetime="11:29" class="weather-today__time">11:29</time>
+              </div>
+              <span class="weather-today__temp">-7°</span>
 
-							<div class="weather-today__other-info">
-								<figure class="weather-today__other-info-weather">
-									<img
-										src="./assets/icons/icon-clouds.svg"
-										alt="иконка облаков"
-										width="24"
-										height="24"
-										loading="lazy" />
-									<figcaption>Облачно</figcaption>
-								</figure>
+              <div class="weather-today__other-info">
+                <figure class="weather-today__other-info-weather">
+                  <img
+                    src="./assets/icons/icon-clouds.svg"
+                    alt="иконка облаков"
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                  <figcaption>Облачно</figcaption>
+                </figure>
 
-								<span class="weather-today__feeling">Ощущается как -11°</span>
-							</div>
-						</div>
-					</article>
+                <span class="weather-today__feeling">Ощущается как -11°</span>
+              </div>
+            </div>
+          </article>
 
-					<ul class="weather-details"></ul>
-				</section>
+          <ul class="weather-details"></ul>
+        </section>
 
-				<section class="section">
-					<div class="tabs">
-						<h3 class="section__title" id="tablist_label">Прогноз:</h3>
+        <section class="section">
+          <div class="tabs">
+            <h3 class="section__title" id="tablist_label">Прогноз:</h3>
 
-						<ul role="tablist" aria-labelledby="tablist_label" class="tabs__list">
-							<li>
-								<button
-									role="tab"
-									id="tab-1"
-									type="button"
-									aria-selected="true"
-									aria-controls="tabpanel-day"
-									data-day="true"
-									class="tabs__button tabs__button_active">
-									на 24 часа
-								</button>
-							</li>
+            <ul
+              role="tablist"
+              aria-labelledby="tablist_label"
+              class="tabs__list"
+            >
+              <li>
+                <button
+                  role="tab"
+                  type="button"
+                  data-tab="day"
+                  id="day"
+                  class="tabs__button tabs__button_active"
+                >
+                  на 24 часа
+                </button>
+              </li>
 
-							<li>
-								<button
-									role="tab"
-									id="tab-2"
-									type="button"
-									aria-selected="false"
-									aria-controls="tabpanel-week"
-									data-week="true"
-									class="tabs__button">
-									на 5 дней
-								</button>
-							</li>
-						</ul>
-					</div>
+              <li>
+                <button
+                  role="tab"
+                  type="button"
+                  data-tab="week"
+                  id="week"
+                  class="tabs__button"
+                >
+                  на 5 дней
+                </button>
+              </li>
+            </ul>
+          </div>
 
-					<div class="slider">
-						<button class="slider__switch-button slider__switch-button_prev disabled"></button>
+          <div class="slider">
+            <button
+              class="slider__switch-button slider__switch-button_prev disabled"
+            >
+              <svg
+                width="11"
+                height="20"
+                viewBox="0 0 11 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 1L1 10L10 19"
+                  stroke="#545454"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
 
-						<ul class="slider__list" role="tabpanel" id="tabpanel" tabindex="0"></ul>
+            <ul
+              class="tab-content slider__list-day"
+              role="tabpanel"
+              id="day"
+              tabindex="0"
+            ></ul>
+            <ul
+              class="tab-content slider__list-week visually-hidden"
+              role="tabpanel"
+              id="week"
+              tabindex="0"
+            ></ul>
 
-						<button class="slider__switch-button slider__switch-button_next"></button>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<span
-					>Проект выполнен в рамках стажировки
-					<a href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a></span
-				>
-			</footer>
-		</div>
+            <button class="slider__switch-button slider__switch-button_next">
+              <svg
+                width="11"
+                height="20"
+                viewBox="0 0 11 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 19L10 10L1 1"
+                  stroke="#545454"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <span
+          >Проект выполнен в рамках стажировки
+          <a href="https://preax.ru" target="_blank" rel="noopener noreferrer"
+            >PREAX</a
+          ></span
+        >
+      </footer>
+    </div>
 
-		<template class="weather-details-template">
-			<li class="weather-details__item">
-				<h2 class="weather-details__title"></h2>
-				<img alt="icon weather" class="weather-details__image" />
-				<span class="weather-details__value"></span>
-				<div class="weather-details__bar">
-					<div class="weather-details__range">
-						<div class="weather-details__range-ellipse"></div>
-					</div>
+    <template class="weather-details-template">
+      <li class="weather-details__item">
+        <h2 class="weather-details__title"></h2>
+        <img alt="icon weather" class="weather-details__image" />
+        <span class="weather-details__value"></span>
+        <div class="weather-details__bar">
+          <div class="weather-details__range">
+            <div class="weather-details__range-ellipse"></div>
+          </div>
 
-					<div class="weather-details__bar-values">
-						<span class="weather-details__bar-value"></span>
-						<span class="weather-details__bar-minValue"></span>
-						<span class="weather-details__bar-maxValue"></span>
-					</div>
-				</div>
-			</li>
-		</template>
+          <div class="weather-details__bar-values">
+            <span class="weather-details__bar-value"></span>
+            <span class="weather-details__bar-minValue"></span>
+            <span class="weather-details__bar-maxValue"></span>
+          </div>
+        </div>
+      </li>
+    </template>
 
-		<template class="slider-template-day">
-			<li class="slider__tab" id="tabpanel-day">
-				<span class="slider__time"></span>
-				<img src="" alt="логотип погоды" width="32" height="32" class="slider__image" />
-				<span class="slider__temp"></span>
-			</li>
-		</template>
+    <template class="slide-template">
+      <li class="slider__tab">
+        <span class="slider__time"></span>
+        <img
+          src=""
+          alt="логотип погоды"
+          width="32"
+          height="32"
+          class="slider__image"
+        />
+        <span class="slider__temp"></span>
+      </li>
+    </template>
 
-		<template class="slider-templat-week">
-			<li class="slider__tab" id="tabpanel-week">
-				<span class="slider__time"></span>
-				<img src="" alt="логотип погоды" width="32" height="32" class="slider__image" />
-				<span class="slider__temp"></span>
-			</li>
-		</template>
-
-		<script src="./pages/main.js" type="module"></script>
-	</body>
+    <script src="./pages/main.js" type="module"></script>
+  </body>
 </html>

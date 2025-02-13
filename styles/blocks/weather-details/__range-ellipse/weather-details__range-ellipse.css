@@ -4,7 +4,7 @@
 	border-radius: 50%;
 	background: var(--color-light);
 	position: absolute;
-	left: calc(75% - 4px);
+	left: calc(var(--ellipse-position) - 3px);
 }
 
 @media (width < 641px) {
