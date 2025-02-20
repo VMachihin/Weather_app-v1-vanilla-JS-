@@ -9,13 +9,13 @@
 }
 
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.slider__list-day {
 		column-gap: 12px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.slider__list-day {
 		column-gap: 8px;
 	}

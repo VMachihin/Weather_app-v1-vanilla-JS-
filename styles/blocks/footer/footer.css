@@ -17,14 +17,14 @@
 	color: rgb(147, 51, 234);
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.footer {
 		text-align: center;
 		padding-block: 24px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.footer {
 		font-size: 12px;
 		padding-block: 16px;

@@ -14,7 +14,7 @@
 	border-bottom: 2px solid var(--color-gray-accent);
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.tabs__button {
 		font-size: 12px;
 	}

@@ -6,13 +6,13 @@
 	column-gap: 32px;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.slider {
 		column-gap: 24px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.slider {
 		column-gap: 16px;
 	}

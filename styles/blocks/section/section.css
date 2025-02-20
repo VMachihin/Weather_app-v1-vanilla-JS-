@@ -4,13 +4,13 @@
 	padding-block: 32px;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.section {
 		padding-block: 24px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.section {
 		padding-block: 16px;
 	}

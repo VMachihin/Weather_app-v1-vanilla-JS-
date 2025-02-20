@@ -7,7 +7,7 @@
 	left: calc(var(--ellipse-position) - 3px);
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.weather-details__range-ellipse {
 		width: 6px;
 		height: 6px;

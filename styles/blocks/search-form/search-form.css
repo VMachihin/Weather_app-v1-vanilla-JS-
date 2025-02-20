@@ -4,26 +4,26 @@
 	position: relative;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.search-form {
 		width: 601px;
 	}
 }
 
-@media (width < 770px) {
+@media (width <= 770px) {
 	.search-form {
 		width: 483px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.search-form {
 		width: 409px;
 		height: 32px;
 	}
 }
 
-@media (width < 380px) {
+@media (width <= 380px) {
 	.search-form {
 		width: 263px;
 	}

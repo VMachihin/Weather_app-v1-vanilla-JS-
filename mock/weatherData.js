@@ -3,7 +3,7 @@ export const weatherDataDetails = [
     id: 'humidity',
     title: 'Влажность',
     icon: './assets/icons/icon-humidity.svg',
-    value: '75',
+    value: '75 %',
     info: {
       min: '0 %',
       max: '100 %',
@@ -20,7 +20,7 @@ export const weatherDataDetails = [
     id: 'visibility',
     title: 'Видимость',
     icon: './assets/icons/icon-visibility.svg',
-    value: '28',
+    value: '28 км',
     info: 'Нормальная',
   },
   {

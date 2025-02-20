@@ -43,14 +43,14 @@ main {
   width: 100%;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
   body {
     padding: 24px;
     background-position: top center;
   }
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
   body {
     padding: 16px;
     align-items: start;

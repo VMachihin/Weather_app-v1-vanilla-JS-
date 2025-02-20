@@ -13,7 +13,7 @@
 	row-gap: 16px;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.weather-details__item {
 		width: 163px;
 		height: 196px;
@@ -21,7 +21,7 @@
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.weather-details__item {
 		max-width: 128px;
 		height: 148px;
@@ -30,7 +30,7 @@
 	}
 }
 
-@media (width < 450px) {
+@media (width <= 450px) {
 	.weather-details__item {
 		width: 100%;
 	}

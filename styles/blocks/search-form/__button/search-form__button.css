@@ -12,13 +12,13 @@
 	cursor: pointer;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.search-form__button {
 		right: 20px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.search-form__button {
 		width: 16px;
 		height: 16px;

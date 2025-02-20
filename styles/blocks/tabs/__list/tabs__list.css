@@ -5,7 +5,7 @@
 	justify-content: space-between;
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.tabs__list {
 		column-gap: 16px;
 	}

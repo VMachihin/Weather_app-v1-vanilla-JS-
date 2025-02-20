@@ -2,7 +2,7 @@
 	font-size: 24px;
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.section__title {
 		font-size: 16px;
 	}

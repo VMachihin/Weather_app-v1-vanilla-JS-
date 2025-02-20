@@ -5,7 +5,7 @@
 	flex-shrink: 0;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.header__logo {
 		width: 54px;
 		height: 48px;
@@ -13,7 +13,7 @@
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.header__logo {
 		width: 32px;
 		height: 32px;

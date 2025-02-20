@@ -25,7 +25,7 @@
 	pointer-events: none;
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.slider__switch-button {
 		min-width: 40px;
 		height: 32px;

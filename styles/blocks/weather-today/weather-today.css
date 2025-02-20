@@ -74,14 +74,14 @@
 	line-height: 24px;
 }
 
-@media (width < 1024px) {
+@media (width <= 1024px) {
 	.weather-today {
 		flex-direction: column;
 		row-gap: 48px;
 	}
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.weather-today {
 		padding: 24px 0;
 		row-gap: 48px;
@@ -96,7 +96,7 @@
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.weather-today {
 		padding: 16px 0;
 		row-gap: 32px;

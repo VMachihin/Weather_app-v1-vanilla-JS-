@@ -12,33 +12,33 @@
 	border-radius: var(--border-radius);
 }
 
-@media (width < 1024px) {
+@media (width <= 1024px) {
 	.content {
 		width: 960px;
 	}
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.content {
 		width: 838px;
 		padding-inline: 24px;
 	}
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
 	.content {
 		width: 720px;
 	}
 }
 
-@media (width < 647px) {
+@media (width <= 647px) {
 	.content {
 		width: 608px;
 		padding-inline: 16px;
 	}
 }
 
-@media (width < 376px) {
+@media (width <= 376px) {
 	.content {
 		width: 343px;
 	}

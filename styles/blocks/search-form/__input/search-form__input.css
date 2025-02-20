@@ -21,7 +21,7 @@
 	background: var(--color-light-accent);
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.search-form__input {
 		padding: 8px 40px 8px 12px;
 		font-size: 14px;

@@ -3,7 +3,7 @@
 	line-height: 32px;
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.weather-details__value {
 		font-size: 22px;
 		line-height: 22px;

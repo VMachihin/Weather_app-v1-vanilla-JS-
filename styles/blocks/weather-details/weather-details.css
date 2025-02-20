@@ -6,21 +6,21 @@
 	height: auto;
 }
 
-@media (width < 887px) {
+@media (width <= 887px) {
 	.weather-details {
 		justify-content: center;
 		gap: 12px;
 	}
 }
 
-@media (width < 641px) {
+@media (width <= 641px) {
 	.weather-details {
 		max-width: 400px;
 		gap: 8px;
 	}
 }
 
-@media (width < 450px) {
+@media (width <= 450px) {
 	.weather-details {
 		width: 311px;
 	}
